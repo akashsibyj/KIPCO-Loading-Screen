@@ -1,0 +1,45 @@
+# ---------------------------------------------------------------
+# KIPCO Loading Screen — only the files the project needs are
+# committed. Everything else in this folder is ignored by default.
+# To add a NEW file to the repo later, add a "!" line for it below.
+# ---------------------------------------------------------------
+
+# 1. Ignore everything in the project root...
+/*
+
+# 2. ...except these project files
+!/.gitignore
+!/.gitattributes
+!/index.html
+!/server.js
+!/package.json
+!/package-lock.json
+!/README.md
+!/LICENSE-Montserrat.txt
+
+# 3. src/ — only the animation code
+!/src/
+/src/*
+!/src/kipco-loader.js
+!/src/kipco-loader.css
+
+# 4. assets/ — only the logo (the fonts folder is not needed;
+#    the font is embedded in the CSS)
+!/assets/
+/assets/*
+!/assets/kipco-logo.png
+
+# 5. Safety net: never commit these anywhere, even if un-ignored above
+*.mp4
+*.mov
+*.webm
+*.avi
+*.mkv
+*.bat
+*.log
+.env
+.env.*
+node_modules/
+Thumbs.db
+desktop.ini
+.DS_Store

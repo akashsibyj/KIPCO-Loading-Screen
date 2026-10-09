@@ -1,0 +1,7 @@
+# Normalise line endings so Windows and other systems see the same files
+* text=auto
+
+# Binary files — never touch their contents
+*.png  binary
+*.jpg  binary
+*.woff2 binary
