@@ -10,26 +10,26 @@
 # 2. ...except these project files
 !/.gitignore
 !/.gitattributes
-!/index.html
-!/server.js
 !/package.json
 !/package-lock.json
+!/dev-server.js
+!/vercel.json
 !/README.md
 !/LICENSE-Montserrat.txt
 
-# 3. src/ — only the animation code
-!/src/
-/src/*
-!/src/kipco-loader.js
-!/src/kipco-loader.css
+# 3. public/ — the website itself (served by Vercel and by npm start)
+!/public/
+/public/*
+!/public/index.html
+!/public/src/
+/public/src/*
+!/public/src/kipco-loader.js
+!/public/src/kipco-loader.css
+!/public/assets/
+/public/assets/*
+!/public/assets/kipco-logo.png
 
-# 4. assets/ — only the logo (the fonts folder is not needed;
-#    the font is embedded in the CSS)
-!/assets/
-/assets/*
-!/assets/kipco-logo.png
-
-# 5. Safety net: never commit these anywhere, even if un-ignored above
+# 4. Safety net: never commit these anywhere, even if un-ignored above
 *.mp4
 *.mov
 *.webm
@@ -39,6 +39,7 @@
 *.log
 .env
 .env.*
+.vercel/
 node_modules/
 Thumbs.db
 desktop.ini

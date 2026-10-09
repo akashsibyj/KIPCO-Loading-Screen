@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#e4eef9">
+  <title>KIPCO</title>
+  <link rel="icon" href="data:,">
+  <link rel="preload" href="assets/kipco-logo.png" as="image">
+  <link rel="stylesheet" href="src/kipco-loader.css">
+  <style>
+    html, body { margin: 0; height: 100%; background: #e4eef9; overflow: hidden; }
+    /* Animation size: 1 = fills the screen height, 0.55 = about half. It always stays centred. */
+    kipco-loader { --kl-size: 0.55; }
+  </style>
+</head>
+<body>
+  <!-- Loading screen. The <img> is only shown if JavaScript is unavailable. -->
+  <kipco-loader>
+    <img src="assets/kipco-logo.png" alt="KIPCO">
+  </kipco-loader>
+
+  <script src="src/kipco-loader.js"></script>
+</body>
+</html>

@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "description": "KIPCO loading animation",
-  "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node dev-server.js"
   },
   "engines": {
     "node": ">=14"
