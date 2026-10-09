@@ -10,8 +10,26 @@
   <link rel="stylesheet" href="src/kipco-loader.css">
   <style>
     html, body { margin: 0; height: 100%; background: #e4eef9; overflow: hidden; }
-    /* Animation size: 1 = fills the screen height, 0.55 = about half. It always stays centred. */
-    kipco-loader { --kl-size: 0.55; }
+    html {
+      -webkit-text-size-adjust: 100%;   /* stop iOS enlarging text on rotate */
+      text-size-adjust: 100%;
+    }
+    body {
+      overscroll-behavior: none;         /* no pull-to-refresh / bounce */
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Animation size: 1 = fills the screen height, 0.55 = about half.
+       It always stays centred, and the screen width always limits it,
+       so it never overflows on narrow phones. */
+    kipco-loader { --kl-size: 0.55; }                  /* desktop / laptop */
+
+    @media (orientation: portrait) and (max-width: 600px) {
+      kipco-loader { --kl-size: 0.45; }                /* phones held upright: smaller */
+    }
+    @media (orientation: landscape) and (max-height: 600px) {
+      kipco-loader { --kl-size: 0.65; }                /* phones held sideways */
+    }
   </style>
 </head>
 <body>

@@ -186,7 +186,7 @@ kipco-loader.kl--logo-failed .kl-logo .kl-logo-fallback { display: flex !importa
   position: absolute;
   left: 50%;
   top: calc(var(--u) * 84.4);
-  width: min(calc(var(--u) * 85), 88cqw);
+  width: min(calc(var(--u) * 85), 76cqw);       /* keeps side margins on phones */
   transform: translateX(-50%);
   opacity: 0;                                   /* hidden in the final composition */
 }
